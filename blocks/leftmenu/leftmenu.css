@@ -1,6 +1,6 @@
 .leftmenu .left-menu-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     border: 1px solid;
 }
 .leftmenu .left-menu>ul {
@@ -13,3 +13,10 @@
     background-color: lightgray;
   }
   
+  .leftmenu .free-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #259cce;
+    font-size: 54px;
+  }

@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.designstyles .design-style-item {
+      display:grid;
+      grid-template-columns:300px 1fr;
+      grid-gap : 40px;
+}
+
+.designstyles .right-div h3{
+    margin-top : 0;
+}
+
+.designstyles .button-container a.button {
+    padding: 6px 18px 5px 18px;
+    background-color : #5e88a1;
+    border-radius: 8px;
+  }
