@@ -11,7 +11,7 @@ export default function decorate(block) {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-        div.className = 'menu-item'
+      div.className = 'menu-item';
     });
     li.addEventListener('click', (event) => {
       const targetDiv = document.querySelector('.free-area');
