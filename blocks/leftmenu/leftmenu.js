@@ -13,10 +13,10 @@ export default function decorate(block) {
     [...li.children].forEach((div) => {
         div.className = 'menu-item'
     });
-    li.addEventListener("click",(event)=>{
-       let targetDiv = document.querySelector('.free-area');
-       targetDiv.innerHTML = '';
-       targetDiv.textContent = event.target.textContent;
+    li.addEventListener('click', (event) => {
+      const targetDiv = document.querySelector('.free-area');
+      targetDiv.innerHTML = '';
+      targetDiv.textContent = event.target.textContent;
     });
     ul.append(li);
   });
