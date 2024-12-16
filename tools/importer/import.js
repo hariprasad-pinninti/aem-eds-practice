@@ -18,7 +18,7 @@ const createDataDesignStylesBlock = (main, document) => {
 
   const table = WebImporter.DOMUtils.createTable(designStyles, document);
   main.prepend(table);
-}
+};
 
 const createMetadataBlock = (main, document) => {
   const meta = {};
