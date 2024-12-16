@@ -1,11 +1,10 @@
 export default function decorate(block) {
-
-   const container = document.createElement('div');
-   container.className = 'left-menu-container';
-   const divOne = document.createElement('div');
-   divOne.className = 'left-menu';
-   const divTwo = document.createElement('div');
-   divTwo.className = 'free-area';
+  const container = document.createElement('div');
+  container.className = 'left-menu-container';
+  const divOne = document.createElement('div');
+  divOne.className = 'left-menu';
+  const divTwo = document.createElement('div');
+  divTwo.className = 'free-area';
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -15,7 +14,7 @@ export default function decorate(block) {
         div.className = 'menu-item'
     });
     li.addEventListener("click",(event)=>{
-       let targetDiv = document.querySelector(".free-area");
+       let targetDiv = document.querySelector('.free-area');
        targetDiv.innerHTML = '';
        targetDiv.textContent = event.target.textContent;
     });
