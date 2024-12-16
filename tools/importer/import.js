@@ -1,7 +1,7 @@
 const domainName = "https://www.aristokraft.com"
 
 const createDataDesignStylesBlock = (main, document) => {
-   const designStyles = [['designStyels']];
+   const designStyles = [['designStyles']];
    document.querySelectorAll('.design-style').forEach((section) => {
            const imageElement = section.querySelector('img');
            const imageSrc = new URL(imageElement.src, domainName).href;
@@ -9,9 +9,11 @@ const createDataDesignStylesBlock = (main, document) => {
            newImageElement.src = imageSrc;
            const headingElement = section.querySelector('.design-style-description h3');
            const heading = headingElement.outerHTML;
-           const descriptionElement = section.querySelector('.design-style-description p');
+           const descriptionElement = section.querySelector('.design-style-description p:nth-child(2)');
            const description = descriptionElement.outerHTML;
-           designStyles.push([newImageElement, heading+description]);
+           const anchorDivElement = section.querySelector('.design-style-section');
+           const anchor = anchorDivElement.innerHTML;
+           designStyles.push([newImageElement, heading+description+anchor]);
    });
 
    const table = WebImporter.DOMUtils.createTable(designStyles, document);
